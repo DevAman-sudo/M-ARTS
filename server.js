@@ -6,13 +6,13 @@ const path = require('path');
 const chalk = require('chalk');
 
 const staticPath = path.join(__dirname , '/public/');
-const templatePath = path.join(__dirname , '/templates/');
+const partialsPath = path.join(__dirname , '/templates/partials/');
 const viewsPath = path.join(__dirname , '/templates/views/');
 
 // To Set The View Engine
 app.set('view engine', 'hbs');
 app.set("views" , viewsPath);
-hbs.registerPartials(__dirname + '/templates/partials');
+hbs.registerPartials(partialsPath);
 
 app.use(express.static(staticPath));
 
