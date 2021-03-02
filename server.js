@@ -20,6 +20,10 @@ app.get('/' , (req , res) => {
     res.render('index');
 });
 
+app.get('/contact' , (req , res) => {
+    res.render('contact');
+});
+
 app.listen(port , () => {
     console.log( chalk.red.bgBlue.bold(`http://127.0.0.1:${port}`));
 });
