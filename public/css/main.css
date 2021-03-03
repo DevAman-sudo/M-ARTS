@@ -1,7 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar-brand {
     font-family: 'Krona One', sans-serif;
     letter-spacing: 0.2rem;
     font-size: 1.2rem;
     font-weight: 200;
     margin-left: 0.5rem;
+}
+
+.manish {
+    height: 20rem;
+    object-fit: cover;
+    margin: 2rem auto;
+}
+
+@media (orientation: landscape) {
+  .mainsh {
+      width: 12rem;
+      height: auto;
+  }
 }
