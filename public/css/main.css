@@ -41,8 +41,8 @@ body {
 /* gallery */
 .gallery {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .gallery_img {
     width: 20rem;
