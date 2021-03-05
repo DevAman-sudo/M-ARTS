@@ -23,3 +23,29 @@ body {
 .about_me_p {
     font-size: 1.25rem;
 }
+.about_me_ps {
+    font-size: 1rem;
+}
+
+.read_more_btn {
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+/* certificate */
+.certificate {
+    width: 20rem;
+    height: auto;
+}
+
+/* gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery_img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+}
