@@ -1,16 +1,16 @@
 <h1 class="about_me mx-4 my-2">Contact Me</h1>
-<form class="container mx-auto my-3" action="#" method="get" accept-charset="utf-8">
+<form class="container mx-auto my-3" action="#" method="POST" id="form" accept-charset="utf-8">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Username</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="what`s your name ..?">
+        <input type="name" name="name" class="form-control" id="username" id="exampleFormControlInput1" placeholder="what`s your name ..?">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" name="email" class="form-control" id="email" id="exampleFormControlInput1" placeholder="name@example.com">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea name="message" class="form-control" id="password" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <!-- submit button -->
     <button class="btn read_more_btn" id="submit_btn" type="submit">Send</button>
