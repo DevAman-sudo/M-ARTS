@@ -17,8 +17,8 @@ form.addEventListener('submit', (event) => {
 
     Email.send({
         Host: "smtp.gmail.com",
-        Username: "deadpoolaman87@gmail.com",
-        Password: "ljypmzyjcpmrnfka",
+        Username: "mannu.website@gmail.com",
+        Password: "leurerxsqnslvnzk",
         To: 'devaman.net@gmail.com',
         From: email.value,
         Subject: "This is the subject",
