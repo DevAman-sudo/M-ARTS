@@ -28,6 +28,11 @@ app.get('/contact' , (req , res) => {
     res.render('contact');
 });
 
+// app.post('/contact' , (req , res) => {
+    
+    // res.send('contact');
+// });
+
 app.listen(port , () => {
     console.log( chalk.red.bgBlue.bold(`http://127.0.0.1:${port}`));
 });
