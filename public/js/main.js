@@ -15,17 +15,15 @@ readMoreBtn.addEventListener('click', () => {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    alert(username.value);
-
     Email.send({
         Host: "smtp.gmail.com",
-        Username: "username",
-        Password: "password",
+        Username: "deadpoolaman87@gmail.com",
+        Password: "ljypmzyjcpmrnfka",
         To: 'devaman.net@gmail.com',
-        From: "you@isp.com",
+        From: email.value,
         Subject: "This is the subject",
         Body: "And this is the body"
     }).then(
-        message => alert(message)
+        message => alert("message send success")
     );
 });
