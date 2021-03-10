@@ -36,6 +36,38 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.post('/', async (req, res) => {
+    try {
+        let user_name = req.body.name;
+        let user_email = req.body.email;
+        let user_message = req.body.message;
+        let textMessage = `Name = ${user_name} , Email = ${user_email} , Message = ${user_message}`;
+        console.log(textMessage);
+
+        // nodemailer mail option //
+        let mailOptions = {
+            from: 'user_email', // sender address
+            to: "mannu.website@gmail.com", // list of receivers
+            subject: "Mail From User Of Mannu @Website ✔", // Subject line
+            text: textMessage
+        };
+        
+        transporter.sendMail(mailOptions , (err , data) => {
+            if (err) {
+                console.log(`Error Occured => ${err}`);
+            } else {
+                console.log('Email Send Sucessfully');
+            }
+        });
+
+        res.redirect('/');
+
+    } catch {
+        res.status(400).send(Error);
+        res.render('error');
+    }
+});
+
 app.get('/about', (req, res) => {
     res.render('about');
 });
@@ -72,6 +104,7 @@ app.post('/contact', async (req, res) => {
 
     } catch {
         res.status(400).send(Error);
+        res.render('error');
     }
 });
 
