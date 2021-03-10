@@ -35,15 +35,15 @@
 }
 
 .slide_slide:nth-child(1) {
-    background-image: url(../img/mannu.jpg);
+    background-image: url(../img/sketch2.jpg);
 }
 
 .slide_slide:nth-child(2) {
-    background-image: url(bg-2.jpg);
+    background-image: url(../img/sketch3.jpg);
 }
 
 .slide_slide:nth-child(3) {
-    background-image: url(bg-3.jpg);
+    background-image: url(../img/sketch4.jpg);
 }
 
 .slide-data {
