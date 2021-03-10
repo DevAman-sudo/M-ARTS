@@ -42,7 +42,6 @@ app.post('/', async (req, res) => {
         let user_email = req.body.email;
         let user_message = req.body.message;
         let textMessage = `Name = ${user_name} , Email = ${user_email} , Message = ${user_message}`;
-        console.log(textMessage);
 
         // nodemailer mail option //
         let mailOptions = {
@@ -82,7 +81,6 @@ app.post('/contact', async (req, res) => {
         let user_email = req.body.email;
         let user_message = req.body.message;
         let textMessage = `Name = ${user_name} , Email = ${user_email} , Message = ${user_message}`;
-        console.log(textMessage);
 
         // nodemailer mail option //
         let mailOptions = {
