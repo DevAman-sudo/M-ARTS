@@ -75,6 +75,12 @@ app.post('/contact', async (req, res) => {
     }
 });
 
+// 404 Error Page //
+app.get('*' , (req , res) =>{
+    res.status(404);
+    res.render('error');
+});
+
 app.listen(port, () => {
     console.log(chalk.red.bgBlue.bold(`http://127.0.0.1:${port}`));
 });
