@@ -20,7 +20,9 @@
   "homepage": "https://github.com/DevAman-sudo/M-ARTS#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "hbs": "^4.1.1"
+    "hbs": "^4.1.1",
+    "nodemailer": "^6.5.0"
   }
 }
