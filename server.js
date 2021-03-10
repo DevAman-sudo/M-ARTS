@@ -4,6 +4,8 @@ const port = process.env.PORT || 8080;
 const hbs = require('hbs');
 const path = require('path');
 const chalk = require('chalk');
+const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 const staticPath = path.join(__dirname, '/public/');
 const partialsPath = path.join(__dirname, '/templates/partials/');
@@ -13,6 +15,15 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: false
 }));
+
+// nodemailer auth //
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSKEY,
+    },
+});
 
 // To Set The View Engine
 app.set('view engine', 'hbs');
@@ -37,9 +48,26 @@ app.post('/contact', async (req, res) => {
     try {
         let user_name = req.body.name;
         let user_email = req.body.email;
-        let user_message = req.body.password;
+        let user_message = req.body.message;
+        let textMessage = `Name = ${user_name} , Email = ${user_email} , Message = ${user_message}`;
+        console.log(textMessage);
 
+        // nodemailer mail option //
+        let mailOptions = {
+            from: 'user_email', // sender address
+            to: "mannu.website@gmail.com", // list of receivers
+            subject: "Mail From User Of Mannu @Website ✔", // Subject line
+            text: textMessage
+        };
         
+        transporter.sendMail(mailOptions , (err , data) => {
+            if (err) {
+                console.log(`Error Occured => ${err}`);
+            } else {
+                console.log('Email Send Sucessfully');
+            }
+        });
+
         res.redirect('/contact');
 
     } catch {
