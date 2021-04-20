@@ -54,3 +54,7 @@ body {
     height: 20rem;
     object-fit: cover;
 }
+
+.sketch-1 {
+    transform: rotate(180deg); 
+}
