@@ -13,7 +13,13 @@
 
     <!-- Mannu Section -->
     <img src="img/mannu.jpg" class="manish img-fluid" alt="mannu">
-    {{>fluid}}
+    <div class="container-fluid">
+        <h1 class="about_me mx-3">About Me</h1>
+        <p class="about_me_p my-3 mx-3">
+            I’ve been working as a professional portrait sketch artist all my adult life.
+        </p>
+        <hr>
+    </div>
 
     <div class="container-fluid">
         <p class="about_me_p about_me_ps my-3 mx-3">
@@ -37,7 +43,35 @@
         </div>
 
         <!-- photos -->
-        {{>photos}}
+        <div class="slider my-2">
+            <div class="slides">
+                <div class="slide_slide">
+                    <div class="slide-data">
+                    </div>
+                </div>
+                <div class="slide_slide">
+                    <div class="slide-data">
+                    </div>
+                </div>
+                <div class="slide_slide">
+                    <div class="slide-data">
+                    </div>
+                </div>
+            </div>
+
+            <button class="arrows prev" onclick="plusslide(-1)">
+                <span><i class="fas fa-angle-left"></i></span>
+            </button>
+            <button class="arrows next" onclick="plusslide(1)">
+                <span><i class="fas fa-angle-right"></i></span>
+            </button>
+
+            <div class="dots">
+                <span onclick="currentslide(1)"></span>
+                <span onclick="currentslide(2)"></span>
+                <span onclick="currentslide(3)"></span>
+            </div>
+        </div>
     </section>
 
     <!-- social links -->

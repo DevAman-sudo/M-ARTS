@@ -1,9 +1,7 @@
 // DOM elements //
 const preloader = document.getElementById('loader');
 
-setTimeout(function() {
-    window.onload = preLoader();
-}, 1500);
+window.onload = preLoader();
 
 // per loader //
 function preLoader() {

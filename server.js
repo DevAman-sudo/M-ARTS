@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 const hbs = require('hbs');
 const path = require('path');
 const chalk = require('chalk');
