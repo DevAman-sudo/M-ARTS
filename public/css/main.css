@@ -3,6 +3,20 @@ body {
     flex-direction: column;
 }
 
+/* Scroll Out JS */
+[data-scroll] {
+    transition: opacity 3s ease;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+}
+
+
 .navbar-brand {
     font-family: 'Krona One', sans-serif;
     letter-spacing: 0.2rem;
