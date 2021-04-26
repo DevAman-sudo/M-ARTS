@@ -33,7 +33,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(staticPath));
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {success: ''});
 });
 
 app.post('/', async (req, res) => {
@@ -59,7 +59,7 @@ app.post('/', async (req, res) => {
             }
         });
 
-        res.redirect('/');
+        res.render('index', {success: 'Mail Send Sucessfully'});
 
     } catch {
         res.status(400).send(Error);
@@ -72,7 +72,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', {success: ''});
 });
 
 app.post('/contact', async (req, res) => {
@@ -98,7 +98,7 @@ app.post('/contact', async (req, res) => {
             }
         });
 
-        res.redirect('/contact');
+        res.render('contact', {success: 'Mail Send Sucessfully'});
 
     } catch {
         res.status(400).send(Error);
